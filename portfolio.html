@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artur Lozovski - Full-Stack Developer Who Delivers Results</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #0a0a0a;
+        color: #e2e8f0;
+      }
+      .gradient-text {
+        background: linear-gradient(to right, #a78bfa, #f472b6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .hero-glow {
+        background-image: radial-gradient(
+          ellipse 80% 50% at 50% -20%,
+          rgba(120, 119, 198, 0.3),
+          rgba(255, 255, 255, 0)
+        );
+      }
+      .btn-primary {
+        background: #8b5cf6;
+        transition: all 0.3s ease;
+      }
+      .btn-primary:hover {
+        background: #7c3aed;
+        box-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
+        transform: translateY(-2px);
+      }
+      .btn-secondary {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+      }
+      .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .animated-item {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .animated-item.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .header-scrolled {
+        background-color: rgba(10, 10, 10, 0.8);
+        backdrop-filter: blur(12px);
+        border-bottom-width: 1px;
+        border-color: #1e293b;
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <!-- Header -->
+    <header
+      id="header"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-xl font-bold gradient-text">AL</a>
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="#about"
+            class="text-slate-300 hover:text-white transition-colors"
+            >About</a
+          >
+          <a
+            href="#projects"
+            class="text-slate-300 hover:text-white transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#skills"
+            class="text-slate-300 hover:text-white transition-colors"
+            >Skills</a
+          >
+          <a
+            href="#contact"
+            class="text-slate-300 hover:text-white transition-colors"
+            >Contact</a
+          >
+        </nav>
+        <a
+          href="#contact"
+          class="hidden md:block btn-primary text-white px-5 py-2 rounded-lg font-semibold text-sm"
+          >Let's Talk</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="min-h-screen flex items-center justify-center relative overflow-hidden hero-glow pt-20"
+      >
+        <div class="container mx-auto px-6 text-center">
+          <div class="max-w-4xl mx-auto">
+            <h1
+              class="text-5xl md:text-7xl font-bold mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-400 animated-item"
+            >
+              I Build <span class="gradient-text">Results-Driven</span> Web
+              Solutions
+            </h1>
+            <p
+              class="text-lg md:text-xl mb-10 text-slate-300 max-w-3xl mx-auto animated-item"
+              style="transition-delay: 150ms"
+            >
+              Full-stack developer turning complex business problems into
+              elegant digital solutions that reduce costs, handle thousands of
+              users, and drive measurable success.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center items-center animated-item"
+              style="transition-delay: 300ms"
+            >
+              <a
+                href="#projects"
+                class="w-full sm:w-auto btn-primary text-white px-8 py-3 rounded-lg font-semibold text-lg flex items-center justify-center gap-2"
+              >
+                <i data-lucide="eye"></i> View My Impact
+              </a>
+              <a
+                href="#contact"
+                class="w-full sm:w-auto btn-secondary text-white px-8 py-3 rounded-lg font-semibold text-lg flex items-center justify-center gap-2"
+              >
+                <i data-lucide="briefcase"></i> Let's Talk Business
+              </a>
+            </div>
+          </div>
+          <div
+            class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto animated-item"
+            style="transition-delay: 450ms"
+          >
+            <div class="text-center">
+              <div class="text-5xl font-bold gradient-text">45%</div>
+              <p class="text-lg text-slate-400">Cost Reduction</p>
+            </div>
+            <div class="text-center">
+              <div class="text-5xl font-bold gradient-text">6+</div>
+              <p class="text-lg text-slate-400">Apps Deployed</p>
+            </div>
+            <div class="text-center">
+              <div class="text-5xl font-bold gradient-text">100%</div>
+              <p class="text-lg text-slate-400">Client Success</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Value Proposition -->
+      <section id="about" class="py-20 md:py-32">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16 max-w-3xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 animated-item">
+              Why Companies Choose Me
+            </h2>
+            <p
+              class="text-xl text-slate-400 animated-item"
+              style="transition-delay: 150ms"
+            >
+              I don't just write code—I architect solutions that deliver
+              tangible business value.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass-card rounded-xl p-8 text-center animated-item">
+              <div
+                class="w-16 h-16 bg-violet-500/20 text-violet-400 rounded-lg flex items-center justify-center mx-auto mb-6"
+              >
+                <i data-lucide="zap" class="w-8 h-8"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Lightning Fast Delivery</h3>
+              <p class="text-slate-400">
+                From concept to production in weeks, not months, using modern
+                stacks for scalability and performance.
+              </p>
+            </div>
+            <div
+              class="glass-card rounded-xl p-8 text-center animated-item"
+              style="transition-delay: 150ms"
+            >
+              <div
+                class="w-16 h-16 bg-pink-500/20 text-pink-400 rounded-lg flex items-center justify-center mx-auto mb-6"
+              >
+                <i data-lucide="trending-up" class="w-8 h-8"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">
+                Measurable Business Impact
+              </h3>
+              <p class="text-slate-400">
+                Every solution I build drives real results—cost savings,
+                efficiency gains, and measurable revenue growth.
+              </p>
+            </div>
+            <div
+              class="glass-card rounded-xl p-8 text-center animated-item"
+              style="transition-delay: 300ms"
+            >
+              <div
+                class="w-16 h-16 bg-teal-500/20 text-teal-400 rounded-lg flex items-center justify-center mx-auto mb-6"
+              >
+                <i data-lucide="layers" class="w-8 h-8"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Full-Stack Expertise</h3>
+              <p class="text-slate-400">
+                From React frontends to AWS backends, payment systems to IoT
+                integration—I handle the complete technical stack.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="py-20 md:py-32">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16 max-w-3xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 animated-item">
+              Projects That Drive Results
+            </h2>
+            <p
+              class="text-xl text-slate-400 animated-item"
+              style="transition-delay: 150ms"
+            >
+              Real solutions for real businesses with measurable outcomes.
+            </p>
+          </div>
+          <div class="space-y-20">
+            <!-- Project Cards -->
+            <div
+              class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center animated-item"
+            >
+              <div class="p-8 glass-card rounded-2xl">
+                <div
+                  class="inline-block bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-semibold mb-4"
+                >
+                  45% Cost Reduction Achieved
+                </div>
+                <h3 class="text-3xl font-bold mb-4">
+                  Smart Warehouse Management System
+                </h3>
+                <p class="text-slate-300 mb-6 text-lg">
+                  Transformed manual inventory processes into an automated,
+                  real-time system that eliminated stockouts and reduced
+                  operational costs.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-slate-700 text-slate-300 px-3 py-1 rounded-full text-sm font-medium"
+                    >React</span
+                  >
+                  <span
+                    class="bg-slate-700 text-slate-300 px-3 py-1 rounded-full text-sm font-medium"
+                    >Node.js</span
+                  >
+                  <span
+                    class="bg-slate-700 text-slate-300 px-3 py-1 rounded-full text-sm font-medium"
+                    >WebSockets</span
+                  >
+                  <span
+                    class="bg-slate-700 text-slate-300 px-3 py-1 rounded-full text-sm font-medium"
+                    >AWS</span
+                  >
+                </div>
+              </div>
+              <div
+                class="p-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl text-center"
+              >
+                <i
+                  data-lucide="briefcase"
+                  class="w-12 h-12 mx-auto mb-4 opacity-75"
+                ></i>
+                <div class="text-6xl font-bold mb-2">45%</div>
+                <div class="text-xl opacity-90">Reduction in Stock Issues</div>
+              </div>
+            </div>
+
+            <div
+              class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center animated-item"
+            >
+              <div
+                class="p-8 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl text-center lg:order-2"
+              >
+                <i
+                  data-lucide="share-2"
+                  class="w-12 h-12 mx-auto mb-4 opacity-75"
+                ></i>
+                <div class="text-6xl font-bold mb-2">&lt;200ms</div>
+                <div class="text-xl opacity-90">Message Delivery</div>
+              </div>
+              <div class="p-8 glass-card rounded-2xl lg:order-1">
+                <div
+                  class="inline-block bg-teal-500/20 text-teal-400 px-3 py-1 rounded-full text-sm font-semibold mb-4"
+                >
+                  Real-Time Platform
+                </div>
+                <h3 class="text-3xl font-bold mb-4">
+                  RentMyTime - Connection Platform
+                </h3>
+                <p class="text-slate-300 mb-6 text-lg">
+                  Built a complete marketplace platform with real-time chat,
+                  enabling instant connections between service providers and
+                  clients.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-slate-700 text-slate-300 px-3 py-1 rounded-full text-sm font-medium"
+                    >React</span
+                  >
+                  <span
+                    class="bg-slate-700 text-slate-300 px-3 py-1 rounded-full text-sm font-medium"
+                    >AWS Lambda</span
+                  >
+                  <span
+                    class="bg-slate-700 text-slate-300 px-3 py-1 rounded-full text-sm font-medium"
+                    >DynamoDB</span
+                  >
+                  <span
+                    class="bg-slate-700 text-slate-300 px-3 py-1 rounded-full text-sm font-medium"
+                    >WebSockets</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center animated-item"
+            >
+              <div class="p-8 glass-card rounded-2xl">
+                <div
+                  class="inline-block bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm font-semibold mb-4"
+                >
+                  AI-Powered Platform
+                </div>
+                <h3 class="text-3xl font-bold mb-4">
+                  BoostFC - Gaming Enhancement Platform
+                </h3>
+                <p class="text-slate-300 mb-6 text-lg">
+                  Developed a comprehensive platform with AI recommendations and
+                  dual payment systems, serving the gaming community with secure
+                  transactions.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-slate-700 text-slate-300 px-3 py-1 rounded-full text-sm font-medium"
+                    >Next.js</span
+                  >
+                  <span
+                    class="bg-slate-700 text-slate-300 px-3 py-1 rounded-full text-sm font-medium"
+                    >MongoDB</span
+                  >
+                  <span
+                    class="bg-slate-700 text-slate-300 px-3 py-1 rounded-full text-sm font-medium"
+                    >Stripe</span
+                  >
+                  <span
+                    class="bg-slate-700 text-slate-300 px-3 py-1 rounded-full text-sm font-medium"
+                    >AI/ML</span
+                  >
+                </div>
+              </div>
+              <div
+                class="p-8 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl text-center"
+              >
+                <i
+                  data-lucide="brain-circuit"
+                  class="w-12 h-12 mx-auto mb-4 opacity-75"
+                ></i>
+                <div class="text-6xl font-bold mb-2">0</div>
+                <div class="text-xl opacity-90">Payment Disputes</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech Stack -->
+      <section id="skills" class="py-20 md:py-32">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16 max-w-3xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 animated-item">
+              Technical Expertise
+            </h2>
+            <p
+              class="text-xl text-slate-400 animated-item"
+              style="transition-delay: 150ms"
+            >
+              Modern technologies that deliver scalable, performant solutions.
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-4xl mx-auto"
+          >
+            <!-- Skills -->
+            <div
+              class="flex items-center gap-4 glass-card p-4 rounded-lg animated-item"
+            >
+              <i data-lucide="file-json-2" class="w-8 h-8 text-sky-400"></i
+              ><span class="font-semibold text-lg">React & Next.js</span>
+            </div>
+            <div
+              class="flex items-center gap-4 glass-card p-4 rounded-lg animated-item"
+            >
+              <i data-lucide="server" class="w-8 h-8 text-green-400"></i
+              ><span class="font-semibold text-lg">Node.js</span>
+            </div>
+            <div
+              class="flex items-center gap-4 glass-card p-4 rounded-lg animated-item"
+            >
+              <i data-lucide="code" class="w-8 h-8 text-blue-400"></i
+              ><span class="font-semibold text-lg">TypeScript</span>
+            </div>
+            <div
+              class="flex items-center gap-4 glass-card p-4 rounded-lg animated-item"
+            >
+              <i data-lucide="cloud" class="w-8 h-8 text-orange-400"></i
+              ><span class="font-semibold text-lg">AWS</span>
+            </div>
+            <div
+              class="flex items-center gap-4 glass-card p-4 rounded-lg animated-item"
+            >
+              <i data-lucide="database" class="w-8 h-8 text-emerald-400"></i
+              ><span class="font-semibold text-lg">SQL & NoSQL</span>
+            </div>
+            <div
+              class="flex items-center gap-4 glass-card p-4 rounded-lg animated-item"
+            >
+              <i data-lucide="cpu" class="w-8 h-8 text-purple-400"></i
+              ><span class="font-semibold text-lg">AI/ML Integration</span>
+            </div>
+            <div
+              class="flex items-center gap-4 glass-card p-4 rounded-lg animated-item"
+            >
+              <i data-lucide="share-2" class="w-8 h-8 text-pink-400"></i
+              ><span class="font-semibold text-lg">WebSockets</span>
+            </div>
+            <div
+              class="flex items-center gap-4 glass-card p-4 rounded-lg animated-item"
+            >
+              <i data-lucide="dollar-sign" class="w-8 h-8 text-indigo-400"></i
+              ><span class="font-semibold text-lg">Stripe API</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section id="contact" class="py-20 md:py-32 hero-glow">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 animated-item">
+            Ready to Build Something Amazing?
+          </h2>
+          <p
+            class="text-xl text-slate-300 mb-10 max-w-3xl mx-auto animated-item"
+            style="transition-delay: 150ms"
+          >
+            I'm available for full-time positions and consulting projects. Let's
+            discuss how I can solve your business challenges with technology.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animated-item"
+            style="transition-delay: 300ms"
+          >
+            <a
+              href="mailto:arccik@hotmail.com"
+              class="w-full sm:w-auto btn-primary text-white px-8 py-3 rounded-lg font-semibold text-lg flex items-center justify-center gap-2"
+            >
+              <i data-lucide="mail"></i> Start a Conversation
+            </a>
+            <a
+              href="https://www.linkedin.com/in/artur-lozovski/"
+              target="_blank"
+              class="w-full sm:w-auto btn-secondary text-white px-8 py-3 rounded-lg font-semibold text-lg flex items-center justify-center gap-2"
+            >
+              <i data-lucide="linkedin"></i> View LinkedIn
+            </a>
+          </div>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto animated-item"
+            style="transition-delay: 450ms"
+          >
+            <div class="text-center">
+              <div
+                class="w-12 h-12 glass-card rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-slate-700"
+              >
+                <i data-lucide="mail" class="w-6 h-6 text-slate-300"></i>
+              </div>
+              <h4 class="text-lg font-semibold mb-1">Email</h4>
+              <p class="text-slate-400">arccik@hotmail.com</p>
+            </div>
+            <div class="text-center">
+              <div
+                class="w-12 h-12 glass-card rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-slate-700"
+              >
+                <i data-lucide="map-pin" class="w-6 h-6 text-slate-300"></i>
+              </div>
+              <h4 class="text-lg font-semibold mb-1">Location</h4>
+              <p class="text-slate-400">Available Remote / London</p>
+            </div>
+            <div class="text-center">
+              <div
+                class="w-12 h-12 glass-card rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-slate-700"
+              >
+                <i data-lucide="calendar" class="w-6 h-6 text-slate-300"></i>
+              </div>
+              <h4 class="text-lg font-semibold mb-1">Availability</h4>
+              <p class="text-slate-400">Immediate Start</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-800 text-center">
+      <p class="text-slate-400">
+        &copy; 2024 Artur Lozovski. Building the future, one solution at a time.
+      </p>
+    </footer>
+
+    <script>
+      // Initialize Lucide Icons
+      lucide.createIcons();
+
+      // Header scroll effect
+      window.addEventListener("scroll", function () {
+        const header = document.getElementById("header");
+        if (window.scrollY > 50) {
+          header.classList.add("header-scrolled");
+        } else {
+          header.classList.remove("header-scrolled");
+        }
+      });
+
+      // Intersection Observer for animations
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      const animatedItems = document.querySelectorAll(".animated-item");
+      animatedItems.forEach((item) => observer.observe(item));
+    </script>
+  </body>
+</html>
